@@ -6,13 +6,13 @@ let sentence_case_button = document.querySelector("#sentence-case");
 let textarea_node = document.querySelector('#textarea');
 
 upper_case_button.addEventListener("click", () => {
-    textarea_node.value = textarea_node.value.toUpperCase()
+    textarea_node.value = textarea_node.value.toUpperCase();
 });
 lower_case_button.addEventListener("click", () => {
-    textarea_node.value = textarea_node.value.toLowerCase()
+    textarea_node.value = textarea_node.value.toLowerCase();
 });
 proper_case_button.addEventListener("click", () => {
-    textarea_node.value = to_proper_string(textarea_node.value)
+    textarea_node.value = to_proper_string(textarea_node.value);
 });
 sentence_case_button.addEventListener("click", () => {
     textarea_node.value = to_sentence_string(textarea_node.value);
@@ -20,13 +20,14 @@ sentence_case_button.addEventListener("click", () => {
 
 function to_proper_string(text) {
     let array_of_words = text.toLowerCase().match(/[^\s.!?]+[\s.!?]*/g);
-    log(array_of_words)
-    return array_of_words.map(word => first_char_to_upper(word)).join("");
+    if(Array.isArray(array_of_words)) return array_of_words.map(word => first_char_to_upper(word)).join("");
+    return text;
 }
 
 function to_sentence_string(text) {
     array_of_sentences = text.toLowerCase().match(/[^.!?]+[\s.!?]*/g);
-    return array_of_sentences.map(sentence => first_char_to_upper(sentence)).join("");
+    if(Array.isArray(array_of_sentences)) return array_of_sentences.map(sentence => first_char_to_upper(sentence)).join("");
+    return text;
 }
 
 function first_char_to_upper(string) {
