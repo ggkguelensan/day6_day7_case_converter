@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #e5e5e5;
-  display: flex;
-  padding-top: 5rem;
-  justify-content: center;
-  margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+    display: flex;
+    padding-top: 5rem;
+    justify-content: center;
+    margin: 0;
 }
 
 .parent_container {
-  height: 70vh;
-  width: 70%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+    height: 70vh;
+    width: 70%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .text_area{
-  margin: 20px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
+
 
